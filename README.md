@@ -1,17 +1,33 @@
-## Travis CI ember web client
-[![Build Status](https://travis-ci.org/travis-ci/travis-web.png?branch=master)](https://travis-ci.org/travis-ci/travis-web)
-### Running the app
+## Alice and Bob CI
 
-In order to run the app you need to install dependencies with:
+Concept: current testing platforms are not designed for cryptography / encryption / cryptocurrency.
+Projects which need to work securely, consistently, and reliably with transparent, public testing take a
+long time to test or fail for false reasons. A continuous integration platform with sufficient random
+entropy, Tor pre-loaded GPG keys, Tor, and a copy of the Bitcoin blockchain could do a lot of good for
+these projects.
 
+Original idea post: https://medium.com/@mapmeld/3ae1584d56dc
+
+Based on [https://github.com/freedomofpress/securedrop/issues/332 this issue], the first goal is to set up
+Travis CI on a machine with enough random entropy to run SecureDrop's tests in five minutes or less. The
+next goal would be to make this scalable for other projects, followed by installing other software and keys
+for projects to use in testing.
+
+## Install
+
+The project is changed very little from Travis CI, but they don't post installation instructions, so it's
+helpful to list them here.
+
+    install nodejs, ruby, rvm
     bundle install
+    PORT=80 bundle exec foreman start
 
-Then you have to run the server, the easiest way to do this is to
-use foreman:
+
+## Running
+
+Run the server with foreman:
 
     bundle exec foreman start
-
-Now you can open [localhost:5000](http://localhost:5000)
 
 By default it uses the official API at `https://api.travis-ci.org`, but you
 can customize the API server URL using:
