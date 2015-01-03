@@ -8,8 +8,8 @@ these projects.
 
 Original idea post: https://medium.com/@mapmeld/3ae1584d56dc
 
-Based on [https://github.com/freedomofpress/securedrop/issues/332 this issue], the first goal is to set up
-Travis CI on a machine with enough random entropy to run SecureDrop's tests in five minutes or less. The
+Based on [this SecureDrop issue](https://github.com/freedomofpress/securedrop/issues/332) and [this GlobaLeaks issue](https://github.com/globaleaks/GlobaLeaks/issues/1017), the first goal is to set up
+Travis CI on a machine with enough random entropy to run crypto project tests in five minutes or less. The
 next goal would be to make this scalable for other projects, followed by installing other software and keys
 for projects to use in testing.
 
